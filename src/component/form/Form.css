@@ -1,0 +1,43 @@
+.form {
+  /* display: block; */
+  box-sizing: border-box;
+  padding: 45px;
+  width: 30%;
+  /* height: 21rem; */
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.form-fill {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.form-h1 {
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  font-size: 1.75rem;
+  font-family: "Playfair Display", serif;
+}
+
+.form-bt {
+  color: #fff;
+  background-color: #fd7792;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.form-size {
+  width: 100%;
+}

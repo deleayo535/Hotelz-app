@@ -1,0 +1,45 @@
+.header {
+  /* background-image: url(https://preview.colorlib.com/theme/hotell/images/ximg_1.jpg.pagespeed.ic.HbEqGs_pAR.webp); */
+  margin-top: -2rem;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 400;
+  padding: 0rem 1rem;
+}
+
+.header-ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.header-li {
+  font-size: 15px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+  opacity: 1 !important;
+}
+
+.navbar-nav {
+  display: flex;
+  /* display: -ms-flexbox; */
+  flex-direction: row;
+  margin-left: auto !important;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  /* -webkit-box-orient: horizontal; */
+  /* -webkit-box-direction: normal; */
+}

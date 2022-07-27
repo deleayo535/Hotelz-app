@@ -1,0 +1,33 @@
+.hero-container {
+  background-image: url(https://preview.colorlib.com/theme/hotell/images/ximg_1.jpg.pagespeed.ic.HbEqGs_pAR.webp);
+  height: 100vh;
+  min-height: 700px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ccc;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+
+  padding-top: 10rem;
+  padding-left: 17rem;
+  padding-right: 17rem;
+  margin-top: -1.5rem;
+}
+
+.hero-bt {
+  color: #fff;
+  background-color: #00917c;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border-color: transparent;
+  font-size: 14px;
+}
