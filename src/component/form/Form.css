@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 45px;
   width: 30%;
+  border: 1px solid #ebebeb;
   /* height: 21rem; */
   background: #fff;
   border-radius: 5px;
@@ -21,7 +22,8 @@
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
   font-size: 1.75rem;
-  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
 }
 
 .form-bt {

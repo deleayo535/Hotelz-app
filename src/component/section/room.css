@@ -1,0 +1,55 @@
+.section-room {
+  display: flex;
+  flex-direction: row;
+}
+
+.room-container {
+  width: 20rem;
+  text-align: center;
+  margin-left: 5rem;
+  padding: 2rem 1rem;
+}
+
+.room-span {
+  font-size: 14px;
+  color: #dfa974;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.room-h2 {
+  font-size: 44px;
+  color: #19191a;
+  line-height: 58px;
+  margin-top: 10px;
+  margin: 1rem 0;
+  font-weight: 400;
+  font-family: 'Lora', serif;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 44px;
+  color: #19191a;
+  line-height: 58px;
+  margin-top: 10px;
+  font-weight: 400;
+  font-family: 'Lora', serif;
+
+  text-align: center;
+}
+
+.para {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Cabin', sans-serif;
+  color: #6b6b6b;
+  line-height: 26px;
+  margin: 0 0 15px 0;
+}

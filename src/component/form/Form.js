@@ -43,7 +43,7 @@ const Forms = () => {
               </Select>
             </Form.Item>
           </div>
-          <div className="form-flex">
+          <div>
             <Form.Item name="phone number">
               <Input placeholder="Phone Number" />
             </Form.Item>
