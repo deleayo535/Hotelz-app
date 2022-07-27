@@ -1,4 +1,4 @@
-// import Cat from './component/Card/cat';
+import Cat from './component/Card/cat';
 
 // import Header from './component/header/header';
 import Hero from './component/hero/hero';
@@ -11,7 +11,7 @@ function App() {
       <Hero />
       <Detail />
       {/* <Forms /> */}
-      {/* <Cat /> */}
+      <Cat />
     </div>
   );
 }

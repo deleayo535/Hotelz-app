@@ -6,13 +6,13 @@
 .room-container {
   width: 20rem;
   text-align: center;
-  margin-left: 5rem;
+  margin-left: 2rem;
   padding: 2rem 1rem;
 }
 
 .room-span {
   font-size: 14px;
-  color: #dfa974;
+  color: #00917c;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;

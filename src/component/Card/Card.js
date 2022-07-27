@@ -5,7 +5,7 @@ import { Button, Card } from 'antd';
 function CardFill() {
   return (
     <Card
-      hoverable
+      hoverable={true}
       bordered
       style={{
         width: 370,
