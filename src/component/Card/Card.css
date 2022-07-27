@@ -32,28 +32,37 @@
   border-radius: 0.05rem;
 }
 
-.cardText {
+.card-h4 {
+  color: #19191a;
+  margin-bottom: 17px;
+
+  font-size: 24px;
+  line-height: 1.2;
   font-weight: 400;
-  color: gray;
-  font-size: 14px;
-  text-align: center;
-  line-height: 1.8;
-  font-family: 'Playfair Display' sans-serif;
-  margin-bottom: 0.8rem;
-  margin-block-start: 0.2em;
-  margin-block-end: 0.6em;
+  font-family: 'Lora', serif;
 }
 
-.cardTitle {
+.card-h3 {
+  color: #dfa974;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: left;
+  line-height: 1.2;
+  font-family: 'Lora', serif;
+}
+
+.card-span {
+  font-family: 'Cabin', sans-serif;
+  font-size: 14px;
   font-weight: 400;
-  text-align: center;
-  font-size: 26px;
-  color: #000000;
-  font-family: serif;
-  /* margin-top: 0.8rem; */
-  /* margin-block-start: 1em; */
-  /* margin-block-end: 1em; */
-  margin-bottom: 0.4rem;
+  color: #19191a;
+}
+
+.card-td {
+  font-size: 16px;
+  color: #707079;
+  line-height: 36px;
 }
 
 .cardButton {

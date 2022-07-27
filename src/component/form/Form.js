@@ -8,7 +8,7 @@ const Forms = () => {
     <Form>
       <div className="form">
         <div>
-          <h1 className="form-h1">Book your Apartment</h1>
+          <h1 className="form-h1">Book Your Hotel</h1>
         </div>
 
         <div className="form-wrap">
@@ -25,23 +25,21 @@ const Forms = () => {
           </div>
           <div className="form-flex">
             <Form.Item className="form-size" name="Adult">
-              <Select placeholder="Adults">
+              <Select placeholder="Guests">
                 <Select.Option value="demo">Adults</Select.Option>
                 <Select.Option value="demo">1</Select.Option>
                 <Select.Option value="demo">2</Select.Option>
                 <Select.Option value="demo">3</Select.Option>
-                <Select.Option value="demo">4</Select.Option>
-                <Select.Option value="demo">5</Select.Option>
               </Select>
             </Form.Item>
-            <Form.Item className="form-size" name="Children">
-              <Select placeholder="Children">
-                <Select.Option value="demo">Children</Select.Option>
-                <Select.Option value="demo">1</Select.Option>
-                <Select.Option value="demo">2</Select.Option>
-                <Select.Option value="demo">3</Select.Option>
-                <Select.Option value="demo">4</Select.Option>
-                <Select.Option value="demo">5</Select.Option>
+            <Form.Item className="form-size" name="Room">
+              <Select placeholder="Room">
+                <Select.Option value="demo">Premium King</Select.Option>
+                <Select.Option value="demo">Deluxe</Select.Option>
+                <Select.Option value="demo">Double</Select.Option>
+                <Select.Option value="demo">Luxury</Select.Option>
+                <Select.Option value="demo">Room With View</Select.Option>
+                <Select.Option value="demo">Small View</Select.Option>
               </Select>
             </Form.Item>
           </div>
@@ -51,7 +49,7 @@ const Forms = () => {
             </Form.Item>
           </div>
           <Button className="form-bt" size="large" block>
-            Book apartment now
+            Book Your Hotel
           </Button>
         </div>
       </div>
