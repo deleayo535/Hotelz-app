@@ -3,6 +3,16 @@
   margin-top: -3rem;
 }
 
+.cardfill {
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  .cardfill {
+    width: 100%;
+  }
+}
+
 .card {
   background-color: #fff;
   border-radius: 0.2rem;
