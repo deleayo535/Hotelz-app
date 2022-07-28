@@ -1,96 +1,90 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Trans } from 'react-i18next';
-import TextBox from '../hoc/TextBox';
+import React from 'react';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
+import PasswordStr from './PasswordStr';
+import './style.css';
 
-const UserRegistraton = () => {
-  const [user, setUser] = useState({
-    firstName: '',
-    password: '',
-    email: '',
-  });
-
-  /* Navigate hook used to redirect to the SignUpConfirmation component */
-  const navigate = useNavigate();
-
-  /*
-        Handles Redirect to the /success page and pass firstName & email address to the SignUpConfirmation component
-    */
-  const handleOnSubmit = (event) => {
-    /* Tests throw console Error if preventDefault is called */
-    event.preventDefault();
-    navigate('/success', {
-      state: {
-        firstName: user.firstName,
-        email: user.email,
-      },
-    });
-  };
-
-  /* Assign the User Entered Value to the State and the field */
-  const handleChange = (event) => {
-    setUser({
-      ...user,
-      [event.target.name]: event.target.value,
-    });
-  };
-
+const SignUpForm = ({
+  history,
+  onSubmit,
+  onChange,
+  errors,
+  user,
+  score,
+  btnTxt,
+  type,
+  pwMask,
+  onPwChange,
+}) => {
   return (
-    <div>
-      <form onSubmit={handleOnSubmit}>
-        <fieldset>
-          <legend>
-            <Trans i18nKey="signUp.registrationFormLegend" />
-          </legend>
-          <TextBox
-            autoFocus
-            i18nKey="signUp.firstName"
-            label
-            id="firstName"
-            type="text"
-            name="firstName"
-            value={user.firstName}
-            onChange={handleChange}
-            required
-            aria-required
-            data-testid="firstName"
-          />
-          <TextBox
-            i18nKey="signUp.emailAddress"
-            label
-            id="email"
-            type="email"
-            name="email"
-            value={user.email}
-            onChange={handleChange}
-            required
-            aria-required
-            data-testid="email"
-          />
-          <TextBox
-            i18nKey="signUp.password"
-            label
-            id="password"
-            type="password"
-            name="password"
-            value={user.password}
-            onChange={handleChange}
-            required
-            aria-required
-            data-testid="password"
-          />
-        </fieldset>
-        <button
+    <div className="loginBox">
+      <h1>Sign Up</h1>
+      {errors.message && <p style={{ color: 'red' }}>{errors.message}</p>}
+
+      <form onSubmit={onSubmit}>
+        <TextField
+          name="username"
+          floatingLabelText="user name"
+          value={user.username}
+          onChange={onChange}
+          errorText={errors.username}
+        />
+        <TextField
+          name="email"
+          floatingLabelText="email"
+          value={user.email}
+          onChange={onChange}
+          errorText={errors.email}
+        />
+        <TextField
+          type={type}
+          name="password"
+          floatingLabelText="password"
+          value={user.password}
+          onChange={onPwChange}
+          errorText={errors.password}
+        />
+
+        <div className="pwStrRow">
+          {score >= 1 && (
+            <div>
+              <PasswordStr score={score} />
+              <FlatButton
+                className="pwShowHideBtn"
+                label={btnTxt}
+                onClick={pwMask}
+                style={{
+                  position: 'relative',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                }}
+              />
+            </div>
+          )}
+        </div>
+        <TextField
+          type={type}
+          name="pwconfirm"
+          floatingLabelText="confirm password"
+          value={user.pwconfirm}
+          onChange={onChange}
+          errorText={errors.pwconfirm}
+        />
+        <br />
+        <RaisedButton
+          className="signUpSubmit"
+          primary={true}
           type="submit"
-          value="Submit"
-          className="btn btn-red btn-right"
-          data-testid="signUpButton"
-        >
-          <Trans i18nKey="signUp.SignUp" />
-        </button>
+          label="submit"
+        />
       </form>
+      <p>
+        Aleady have an account? <br />
+        <a href="/">Log in here</a>
+      </p>
     </div>
   );
 };
 
-export default UserRegistraton;
+export default SignUpForm;

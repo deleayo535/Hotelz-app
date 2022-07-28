@@ -12,6 +12,12 @@
   padding: 0rem 1rem;
 }
 
+.header-h1 {
+  padding-top: 18px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
 .header-ul {
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -30,6 +36,15 @@
   color: #fff;
   position: relative;
   opacity: 1 !important;
+}
+
+.header-bt {
+  color: #fff;
+  background-color: #00917c;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border-color: transparent;
+  font-size: 14px;
 }
 
 .navbar-nav {

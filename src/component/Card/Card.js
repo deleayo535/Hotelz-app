@@ -1,53 +1,52 @@
 import React from 'react';
 import './Card.css';
-import { Button, Card } from 'antd';
+import { Button, Row, Card } from 'antd';
 
-function CardFill() {
+function CardFill(props) {
   return (
-    <Card
-      hoverable={true}
-      bordered
-      style={{
-        width: 370,
-        // backgroundColor: 'red',
-      }}
-      cover={
-        <div>
-          <img
-            alt=""
-            src="https://preview.colorlib.com/theme/sona/img/room/xroom-1.jpg.pagespeed.ic.MJNN_IA10s.webp"
-          />
+    <div>
+      <Row>
+        <Card
+          bordered={true}
+          hoverable={true}
+          style={{
+            width: 370,
+            height: 560,
+            margin: '1rem',
+            border: '1px solid #ebebeb',
+          }}
+          className="card"
+        >
+          <img alt="pics" src={props.coverImg} className="cardImage card" />
           <div>
-            <h4 className="card-h4">Premium King Room</h4>
+            <h4 className="card-h4">{props.title}</h4>
             <h3 className="card-h3">
-              "153$"
-              <span className="card-span">/Pernight</span>
+              {props.price}
+              <span className="card-span">{props.span}</span>
             </h3>
-            <table>
-              <tbody>
-                <tr>
-                  <td class="r-o">Size:</td>
-                  <td>30 ft</td>
-                </tr>
-                <tr>
-                  <td class="r-o">Capacity:</td>
-                  <td>Max persion 3</td>
-                </tr>
-                <tr>
-                  <td class="r-o">Bed:</td>
-                  <td>King Beds</td>
-                </tr>
-                <tr>
-                  <td class="r-o">Services:</td>
-                  <td>Wifi, Television, Bathroom,...</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
-          <Button>more details</Button>
-        </div>
-      }
-    ></Card>
+          <div className="card-li">
+            <p className="card-p">
+              {props.review}:{' '}
+              <span className="card-s">{props.reviewDetail}</span>
+            </p>
+            <p className="card-p">
+              {props.review1}:{' '}
+              <span className="card-s">{props.reviewDetail1}</span>
+            </p>
+            <p className="card-p">
+              {props.review2}:{' '}
+              <span className="card-s">{props.reviewDetail2}</span>
+            </p>
+            <p className="card-p">
+              {props.review3}:{' '}
+              <span className="card-s">{props.reviewDetail3}</span>
+            </p>
+          </div>
+          <Button className="card-bt ">More Details</Button>
+        </Card>
+      </Row>
+    </div>
   );
 }
 
