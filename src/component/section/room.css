@@ -1,6 +1,7 @@
 .section-room {
   display: flex;
   flex-direction: row;
+  margin: 30px;
 }
 
 .room-container {
@@ -29,6 +30,7 @@
 }
 
 .img {
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
 }

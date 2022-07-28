@@ -1,6 +1,6 @@
 import { Button, Input } from 'antd';
 import React from 'react';
-import './signup.css';
+import '../signin/signin.css';
 
 function SignUp() {
   return (

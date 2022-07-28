@@ -40,11 +40,12 @@
 
 .header-bt {
   color: #fff;
+  height: 30px;
   background-color: #00917c;
-  padding: 10px 25px;
+  /* padding: 10px 25px; */
   border-radius: 30px;
   border-color: transparent;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .navbar-nav {

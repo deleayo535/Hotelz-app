@@ -1,6 +1,6 @@
 import React from 'react';
 import './room.css';
-// import Forms from './component/form/Form';
+import Forms from '../form/Form';
 
 function Detail() {
   return (
@@ -31,7 +31,9 @@ function Detail() {
           style={{ width: '15rem' }}
         />
       </div>
-      <div>{/* <Forms /> */}</div>
+      <div style={{ marginLeft: '40px', marginTop: '20px' }}>
+        <Forms />
+      </div>
     </div>
   );
 }

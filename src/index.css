@@ -37,10 +37,15 @@ code {
   background: #00917c;
 }
 
+.ant-card-body {
+  padding: 0 !important;
+}
+
 .cardcontainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   padding: 0px 20px;
+  margin: 40px;
 }

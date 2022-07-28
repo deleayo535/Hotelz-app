@@ -25,7 +25,7 @@ function SignIn() {
       >
         Sign In
       </Button>
-      <p className="sign-p">If you don't have an Account SignUp here</p>
+      <p className="sign-p">If you don't have an Account. SignUp</p>
     </div>
   );
 }

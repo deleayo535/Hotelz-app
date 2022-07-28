@@ -27,8 +27,10 @@
 }
 
 .form-bt {
+  font-size: 14px;
+  font-weight: 500;
   color: #fff;
-  background-color: #fd7792;
+  background-color: #00917c;
 }
 
 .form-flex {

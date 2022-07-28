@@ -48,7 +48,7 @@ const Forms = () => {
             </Form.Item>
           </div>
           <Button className="form-bt" size="large" block>
-            Book Your Hotel
+            BOOK NOW
           </Button>
         </div>
       </div>
