@@ -1,4 +1,3 @@
-import 'antd/dist/antd.css';
 import { Button, Form, Input, Select } from 'antd';
 import React from 'react';
 import './Form.css';

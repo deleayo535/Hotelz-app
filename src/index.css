@@ -12,6 +12,31 @@ code {
     monospace;
 }
 
+/* <---------------scrollbar-styles--------> */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  width: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00917c;
+  width: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00917c;
+}
+
 .cardcontainer {
   display: flex;
   flex-wrap: wrap;
