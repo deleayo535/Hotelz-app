@@ -1,35 +1,22 @@
 import 'antd/dist/antd.css';
-import CardFill from './component/Card/Card';
-
-// import Header from './component/header/header';
-import Hero from './component/hero/hero';
-import Detail from './component/section/room';
-import data from './component/Card/data';
-// import SignIn from './component/signin/signIn';
-import Footer from './component/footer/footer';
-// import SignUp from './component/signup/SignUp';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/home';
+import SignIn from './pages/signinpage/signIn';
+import SignUp from './pages/signinpage/SignUp';
+import ViewRooms from './pages/viewRooms/viewRooms';
 
 function App() {
-  const Cards = data.map((item) => {
-    return (
-      <CardFill
-        img={item.coverImg}
-        title={item.title}
-        price={item.price}
-        span={item.span}
-      />
-    );
-  });
   return (
-    <div>
-      {/* <Header /> */}
-      <Hero />
-      <Detail />
-      <div className="cardcontainer">{Cards}</div>
-      <Footer />
-      {/* <SignIn /> */}
-      {/* <Forms /> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/ViewRooms" element={<ViewRooms />} />
+        {/* <Route path="/room" element={<Apartment />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

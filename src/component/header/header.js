@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import './header.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -11,12 +11,22 @@ function Header() {
           <span style={{ color: '#00917c' }}>z</span>
         </h1>
         <ul className="navbar-nav header-ul">
-          <li className="header-li">Home</li>
+          <li className="header-li">
+            <Link style={{ color: '#fff' }} to="/home">
+              Home
+            </Link>
+          </li>
           <li className="header-li">About</li>
           <li className="header-li">Services</li>
-          <li className="header-li">Room</li>
           <li className="header-li">
-            <Button className="header-bt">Sign In</Button>
+            <Link style={{ color: '#fff' }} to="/Room">
+              Room
+            </Link>
+          </li>
+          <li className="header-li">
+            <Button className="header-bt">
+              <Link to="/SignIn">Sign In</Link>
+            </Button>
           </li>
         </ul>
       </header>

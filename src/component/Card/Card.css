@@ -35,9 +35,14 @@
   /* overflow-x: auto; */
 }
 
+.img-wrap {
+  max-height: 250px;
+}
+
 .cardImage {
   margin-bottom: 1rem;
-  /* width: 16rem; */
+  height: 100%;
+  width: 100%;
   /* object-fit: center; */
   border-radius: 0.05rem;
 }

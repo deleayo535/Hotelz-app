@@ -1,6 +1,7 @@
 import { Button } from 'antd';
 import Header from '../header/header';
 import './hero.css';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -10,7 +11,9 @@ function Hero() {
         <h1 className="hero-text">
           Once a year go someplace you've never been before.
         </h1>
-        <Button className="hero-bt">View our rooms</Button>
+        <Link to="/ViewRooms">
+          <Button className="hero-bt">View our rooms</Button>
+        </Link>
       </div>
     </div>
   );

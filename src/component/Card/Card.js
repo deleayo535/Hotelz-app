@@ -17,7 +17,9 @@ function CardFill(props) {
           }}
           className="card"
         >
-          <img alt="pics" src={props.img} className="cardImage card" />
+          <div className="img-wrap">
+            <img alt="pics" src={props.img} className="cardImage card" />
+          </div>
           <div>
             <h4 className="card-h4">{props.title}</h4>
             <h3 className="card-h3">
