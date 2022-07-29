@@ -26,7 +26,7 @@ const datas = [
   {
     id: 4,
     coverImg:
-      'https://preview.colorlib.com/theme/marian/assets/img/rooms/xroom1.jpg.pagespeed.ic.DBxObuxN6l.webp',
+      'https://preview.colorlib.com/theme/sona/img/room/xroom-4.jpg.pagespeed.ic.wSsHvrNt-4.webp',
     title: 'Double Room',
     price: '125$',
     span: '/Pernight',
@@ -34,7 +34,7 @@ const datas = [
   {
     id: 5,
     coverImg:
-      'https://preview.colorlib.com/theme/sona/img/room/xroom-3.jpg.pagespeed.ic.MKQduIxt9V.webp',
+      'https://preview.colorlib.com/theme/sona/img/room/xroom-5.jpg.pagespeed.ic.hMus1Gk_WX.webp',
     title: 'Double Room',
     price: '125$',
     span: '/Pernight',
@@ -42,7 +42,7 @@ const datas = [
   {
     id: 6,
     coverImg:
-      'https://preview.colorlib.com/theme/sona/img/room/xroom-3.jpg.pagespeed.ic.MKQduIxt9V.webp',
+      'https://preview.colorlib.com/theme/sona/img/room/xroom-6.jpg.pagespeed.ic.a0v5A0LXKl.webp',
     title: 'Double Room',
     price: '125$',
     span: '/Pernight',

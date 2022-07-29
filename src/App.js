@@ -4,6 +4,7 @@ import Home from './pages/home/home';
 import SignIn from './pages/signinpage/signIn';
 import SignUp from './pages/signinpage/SignUp';
 import ViewRooms from './pages/viewRooms/viewRooms';
+import RoomDetails from './pages/viewRooms/roomDetail';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/ViewRooms" element={<ViewRooms />} />
-        {/* <Route path="/room" element={<Apartment />} /> */}
+        <Route path="/RoomDetails" element={<RoomDetails />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import { Link } from 'react-router-dom';
 import { Button, Row, Card } from 'antd';
 
 function CardFill(props) {
@@ -17,9 +18,7 @@ function CardFill(props) {
           }}
           className="card"
         >
-          <div className="img-wrap">
-            <img alt="pics" src={props.img} className="cardImage card" />
-          </div>
+          <img alt="pics" src={props.img} className="cardImage card" />
           <div>
             <h4 className="card-h4">{props.title}</h4>
             <h3 className="card-h3">
@@ -42,7 +41,9 @@ function CardFill(props) {
               <span className="card-s">Wifi, Television, Bathroom,..</span>
             </p>
           </div>
-          <Button className="card-bt ">More Details</Button>
+          <Link to="/RoomDetails">
+            <Button className="card-bt ">More Details</Button>
+          </Link>
         </Card>
       </Row>
     </div>

@@ -15,9 +15,20 @@ function ViewRooms() {
   });
   return (
     <div>
-      <div className="hero-container">
+      <div
+        style={{ height: '200px', minHeight: '200px' }}
+        className="hero-container"
+      >
         <Header />
-        <div></div>
+        <div>
+          <h1>Our Rooms</h1>
+          <div>
+            <img></img>
+            <img></img>
+            <img></img>
+            <img></img>
+          </div>
+        </div>
       </div>
       <div className="cardcontainer">{Cards}</div>
     </div>
