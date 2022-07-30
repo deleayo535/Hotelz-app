@@ -3,6 +3,7 @@ import './header.css';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  const auth = sessionStorage.getItem('user');
   return (
     <div>
       <header className="header">
@@ -25,7 +26,9 @@ function Header() {
           </li>
           <li className="header-li">
             <Button className="header-bt">
-              <Link to="/SignIn">Sign In</Link>
+              <Link to={auth ? '/dashboard' : '/SignIn'}>
+                {auth ? 'Dashboard' : 'Sign In'}
+              </Link>
             </Button>
           </li>
         </ul>
