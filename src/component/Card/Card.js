@@ -23,22 +23,22 @@ function CardFill(props) {
             <h4 className="card-h4">{props.title}</h4>
             <h3 className="card-h3">
               {props.price}
-              <span className="card-span">{props.span}</span>
+              <span className="card-span"> /Pernight</span>
             </h3>
           </div>
           <div className="card-li">
             <p className="card-p">
-              size: <span className="card-s">30 ft</span>
+              size: <span className="card-s">{props.size} ft</span>
             </p>
             <p className="card-p">
-              Capacity: <span className="card-s">Max persion 3</span>
+              Capacity:{' '}
+              <span className="card-s">Max persion {props.capacity}</span>
             </p>
             <p className="card-p">
-              Bed: <span className="card-s">King Beds</span>
+              Bed: <span className="card-s">{props.bed}</span>
             </p>
             <p className="card-p">
-              Services:{' '}
-              <span className="card-s">Wifi, Television, Bathroom,..</span>
+              Services: <span className="card-s">{props.services}</span>
             </p>
           </div>
           <Link to="/RoomDetails">
