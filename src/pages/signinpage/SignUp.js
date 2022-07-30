@@ -1,9 +1,40 @@
 import { Button, Input } from 'antd';
-import React from 'react';
+import React, { useState } from 'react';
 import './signin.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import apiService from '../../utils/apiServices';
 
 function SignUp() {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    fullName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  const handleInputs = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+  const signUpHandler = async () => {
+    const { email, password, confirmPassword, fullName } = form;
+    try {
+      if (password !== confirmPassword) return;
+
+      const auth = await apiService('/api/v1/auth/signup', 'POST', {
+        name: fullName,
+        email,
+        password,
+        passwordConfirm: confirmPassword,
+      });
+
+      sessionStorage.setItem('user', JSON.stringify(auth));
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="sign-page">
       <h1 className="header-h1 auth-h1">
@@ -14,18 +45,30 @@ function SignUp() {
         <Input
           style={{ width: '80%', marginBottom: '15px' }}
           placeholder="Enter your Fullname"
+          name="fullName"
+          onChange={handleInputs}
+          value={form.fullName}
         />
         <Input
           style={{ width: '80%', marginBottom: '15px' }}
           placeholder="Enter your Email"
+          name="email"
+          onChange={handleInputs}
+          value={form.email}
         />
         <Input.Password
           style={{ width: '80%', marginBottom: '15px' }}
           placeholder="input password"
+          name="password"
+          onChange={handleInputs}
+          value={form.password}
         />
         <Input.Password
           style={{ width: '80%', marginBottom: '15px' }}
           placeholder="confirm password"
+          name="confirmPassword"
+          onChange={handleInputs}
+          value={form.confirmPassword}
         />
         <Button
           style={{
@@ -35,6 +78,7 @@ function SignUp() {
           }}
           size="medium"
           block
+          onClick={signUpHandler}
         >
           Sign Up
         </Button>
