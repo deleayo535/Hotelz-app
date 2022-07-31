@@ -1,7 +1,5 @@
 .header {
-  /* background-image: url(https://preview.colorlib.com/theme/hotell/images/ximg_1.jpg.pagespeed.ic.HbEqGs_pAR.webp); */
   margin-top: -2rem;
-
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -42,7 +40,6 @@
   color: #fff;
   height: 30px;
   background-color: #00917c;
-  /* padding: 10px 25px; */
   border-radius: 30px;
   border-color: transparent;
   font-size: 12px;
@@ -50,12 +47,9 @@
 
 .navbar-nav {
   display: flex;
-  /* display: -ms-flexbox; */
   flex-direction: row;
   margin-left: auto !important;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  /* -webkit-box-orient: horizontal; */
-  /* -webkit-box-direction: normal; */
 }

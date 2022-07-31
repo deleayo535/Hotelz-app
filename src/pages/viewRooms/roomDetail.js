@@ -26,10 +26,7 @@ function RoomDetails() {
   }, []);
   return (
     <div>
-      <div
-        // style={{ height: '200px', minHeight: '200px' }}
-        className="hero-container"
-      >
+      <div className="hero-container">
         <Header />
         <div className="room2-container">
           <div className="room-details">

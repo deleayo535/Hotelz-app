@@ -19,8 +19,10 @@ function Header() {
     <div>
       <header className="header">
         <h1 className="header-h1">
-          <span style={{ color: '#fff' }}>Hotel</span>
-          <span style={{ color: '#00917c' }}>z</span>
+          <Link to="/">
+            <span style={{ color: '#fff' }}>Hotel</span>
+            <span style={{ color: '#00917c' }}>z</span>
+          </Link>
         </h1>
         <ul className="navbar-nav header-ul">
           <li className="header-li">

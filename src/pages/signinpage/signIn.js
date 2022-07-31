@@ -15,6 +15,7 @@ function SignIn() {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
+
   const logInHandler = async () => {
     const { email, password } = form;
     try {
@@ -29,6 +30,7 @@ function SignIn() {
       console.log(error);
     }
   };
+
   return (
     <div className="sign-page">
       <h1 className="header-h1 auth-h1">

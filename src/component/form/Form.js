@@ -102,7 +102,6 @@ const Forms = () => {
               name="name"
             />
           </Form.Item>
-          {/* <div className="form-flex"> */}
           <Form.Item className="form-size" name="Adult">
             <Select placeholder="1 Guests" onChange={onGuestChange}>
               <Select.Option value="1">1 Guests</Select.Option>
@@ -121,7 +120,6 @@ const Forms = () => {
               ))}
             </Select>
           </Form.Item>
-          {/* </div> */}
           <div>
             <Form.Item name="phone number">
               <Input placeholder="Phone Number" />

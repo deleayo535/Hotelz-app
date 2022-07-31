@@ -22,7 +22,6 @@ function Detail() {
         <img
           src="	https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
           alt=""
-          // className="class-img'
           style={{ width: '15rem', margin: '1rem' }}
         />
         <img
@@ -39,19 +38,3 @@ function Detail() {
 }
 
 export default Detail;
-
-/* <div className="section-title">
-        <span>About Us</span>
-        <h2>
-          Intercontinental LA Westlake Hotel</br>
-        </h2>
-        <p className="para">
-          Sona.com is a leading online accommodation site. We’re passionate
-          about travel. Every day, we inspire and reach millions of travelers
-          across 90 local websites in 41 languages.
-        </p>
-        <p className="para">
-          So when it comes to booking the perfect hotel, vacation rental,
-          resort, apartment, guest house, or tree house, we’ve got you covered.
-        </p>
-      </div> */

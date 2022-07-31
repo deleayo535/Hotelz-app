@@ -10,8 +10,6 @@
 .footer-wrap {
   display: flex;
   flex-direction: row;
-  /* flex: 0 0 25%;
-  max-width: 25%; */
 
   width: 100%;
   padding-right: 15px;
@@ -44,11 +42,9 @@
 .footer-bottom {
   height: 30px;
   background: #00917c;
-  /* padding-top: 20px; */
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 10px;
-  /* padding: 2em 0; */
   justify-content: space-between;
 }
 
