@@ -23,7 +23,7 @@ function SignIn() {
         password,
       });
 
-      sessionStorage.setItem('user', JSON.stringify(auth));
+      sessionStorage.setItem('user', JSON.stringify(auth?.data?.data?.user));
       navigate('/');
     } catch (error) {
       console.log(error);
