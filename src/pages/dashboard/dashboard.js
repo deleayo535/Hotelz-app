@@ -19,7 +19,7 @@ function Dashboard() {
         `/api/v1/bookings?user=${user._id}&paid=true`,
         'GET'
       );
-      console.log(booking);
+
       setbooking(booking?.data?.data?.data);
     } catch (error) {
       console.log(error);
@@ -27,17 +27,18 @@ function Dashboard() {
   };
 
   useEffect(() => {
+    console.log('auth', auth);
     if (auth) {
+      console.log('auth-re', auth);
       const user = JSON.parse(auth);
       getbooking(user);
     }
   }, [auth]);
   const handleVerify = async (e) => {
     try {
-      const { data } = await apiService(`/api/v1/transaction/verify`, 'POST', {
+      await apiService(`/api/v1/transaction/verify`, 'POST', {
         reference: reference,
       });
-      console.log('data', data);
     } catch (error) {
       console.log(error);
     }
@@ -45,6 +46,8 @@ function Dashboard() {
   useEffect(() => {
     if (reference) {
       handleVerify();
+      // const user = JSON.parse(auth);
+      // getbooking(user);
     }
   }, [reference]);
 

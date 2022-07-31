@@ -1,9 +1,11 @@
 import { Button } from 'antd';
 import './header.css';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
+
   const [auth, setAuth] = useState(false);
 
   useEffect(() => {
@@ -14,6 +16,7 @@ function Header() {
   const logOut = () => {
     sessionStorage.clear();
     setAuth(false);
+    navigate('/');
   };
   return (
     <div>

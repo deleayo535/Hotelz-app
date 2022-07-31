@@ -76,8 +76,7 @@ const Forms = () => {
           user: form.user,
         }
       );
-      console.log('window.location', window.location);
-      setloading(false);
+      // setloading(false);s
 
       //redirect to paystack
       window.location.href = data?.data?.data?.data?.authorization_url;
