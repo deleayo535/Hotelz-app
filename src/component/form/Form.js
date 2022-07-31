@@ -2,17 +2,12 @@ import { Button, Form, Input, Select } from 'antd';
 import React from 'react';
 import './Form.css';
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 
 import apiService from '../../utils/apiServices';
 import { useEffect, useState } from 'react';
 
 const Forms = () => {
-  const { search } = useLocation();
-
   const auth = sessionStorage.getItem('user');
-  const query = new URLSearchParams(search);
-  const reference = query.get('reference');
 
   const [options, setoptions] = useState([]);
   const [loading, setloading] = useState(false);
@@ -57,26 +52,6 @@ const Forms = () => {
     }
   }, [auth]);
 
-  const handleVerify = async (e) => {
-    try {
-      const { data } = await apiService(`/api/v1/transaction/verify`, 'POST', {
-        reference: reference,
-      });
-      console.log('data', data);
-
-      setloading(false);
-    } catch (error) {
-      console.log(error);
-
-      setloading(false);
-    }
-  };
-  useEffect(() => {
-    if (reference) {
-      handleVerify();
-    }
-  }, [reference]);
-
   const amountToPay = () => {
     const room = options.filter((item) => item._id === form.room);
     if (room[0]) {
@@ -95,13 +70,15 @@ const Forms = () => {
         {
           email: form.email,
           amount: amountToPay(),
-          callback_url: window.location.origin,
+          callback_url: window.location.origin + '/dashboard',
           room: form.room,
           price: form.price,
           user: form.user,
         }
       );
       console.log('window.location', window.location);
+      setloading(false);
+
       //redirect to paystack
       window.location.href = data?.data?.data?.data?.authorization_url;
     } catch (error) {

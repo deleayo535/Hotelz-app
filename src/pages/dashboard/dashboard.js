@@ -2,34 +2,64 @@ import Header from '../../component/header/header';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../utils/apiServices';
 import CardFill from '../../component/Card/Card';
+import { useLocation } from 'react-router-dom';
 
 function Dashboard() {
-  const [rooms, setRooms] = useState([]);
+  const { search } = useLocation();
+  const auth = sessionStorage.getItem('user');
 
-  const getrooms = async () => {
+  const query = new URLSearchParams(search);
+  const reference = query.get('reference');
+
+  const [bookings, setbooking] = useState([]);
+
+  const getbooking = async (user) => {
     try {
-      const rooms = await apiService('/api/v1/rooms', 'GET');
-      console.log(rooms);
-      setRooms(rooms?.data?.data?.data);
+      const booking = await apiService(
+        `/api/v1/bookings?user=${user._id}&paid=true`,
+        'GET'
+      );
+      console.log(booking);
+      setbooking(booking?.data?.data?.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (auth) {
+      const user = JSON.parse(auth);
+      getbooking(user);
+    }
+  }, [auth]);
+  const handleVerify = async (e) => {
+    try {
+      const { data } = await apiService(`/api/v1/transaction/verify`, 'POST', {
+        reference: reference,
+      });
+      console.log('data', data);
     } catch (error) {
       console.log(error);
     }
   };
   useEffect(() => {
-    getrooms();
-  }, []);
-  const Cards = rooms.slice(0, 3).map((item, i) => {
+    if (reference) {
+      handleVerify();
+    }
+  }, [reference]);
+
+  const Cards = bookings.map((item, i) => {
     return (
       <CardFill
         key={i}
         id={item._id}
-        img={item.imageCover}
-        title={item.title}
+        img={item.room.imageCover}
+        title={item.room.title}
         price={item.price}
-        bed={item.bed}
-        services={item.services}
-        size={item.size}
-        capacity={item.capacity}
+        bed={item.room.bed}
+        services={item.room.services}
+        size={item.room.size}
+        capacity={item.room.capacity}
       />
     );
   });
