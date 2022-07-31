@@ -45,6 +45,7 @@ function Home() {
       <Detail />
       <div className="cardcontainer">{Cards}</div>
       <Footer />
+      {/* <Dashboard /> */}
     </div>
   );
 }

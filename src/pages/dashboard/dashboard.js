@@ -1,9 +1,9 @@
 import Header from '../../component/header/header';
-import CardFill from '../../component/Card/Card';
+import React, { useState, useEffect } from 'react';
 import apiService from '../../utils/apiServices';
-import { useEffect, useState } from 'react';
+import CardFill from '../../component/Card/Card';
 
-function ViewRooms() {
+function Dashboard() {
   const [rooms, setRooms] = useState([]);
 
   const getrooms = async () => {
@@ -18,8 +18,7 @@ function ViewRooms() {
   useEffect(() => {
     getrooms();
   }, []);
-
-  const Cards = rooms.map((item, i) => {
+  const Cards = rooms.slice(0, 3).map((item, i) => {
     return (
       <CardFill
         key={i}
@@ -41,13 +40,10 @@ function ViewRooms() {
         className="hero-container"
       >
         <Header />
-        <div>
-          <h1>Our Rooms</h1>
-        </div>
+        <div className="cardcontainer">{Cards}</div>
       </div>
-      <div className="cardcontainer">{Cards}</div>
     </div>
   );
 }
 
-export default ViewRooms;
+export default Dashboard;

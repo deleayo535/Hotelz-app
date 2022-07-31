@@ -41,7 +41,7 @@ function CardFill(props) {
               Services: <span className="card-s">{props.services}</span>
             </p>
           </div>
-          <Link to="/RoomDetails">
+          <Link to={`/RoomDetails?id=${props.id}`}>
             <Button className="card-bt ">More Details</Button>
           </Link>
         </Card>

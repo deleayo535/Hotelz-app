@@ -1,9 +1,20 @@
 import { Button } from 'antd';
 import './header.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function Header() {
-  const auth = sessionStorage.getItem('user');
+  const [auth, setAuth] = useState(false);
+
+  useEffect(() => {
+    const auth = sessionStorage.getItem('user');
+    setAuth(!!auth);
+  }, []);
+
+  const logOut = () => {
+    sessionStorage.clear();
+    setAuth(false);
+  };
   return (
     <div>
       <header className="header">
@@ -13,14 +24,14 @@ function Header() {
         </h1>
         <ul className="navbar-nav header-ul">
           <li className="header-li">
-            <Link style={{ color: '#fff' }} to="/home">
+            <Link style={{ color: '#fff' }} to="/">
               Home
             </Link>
           </li>
           <li className="header-li">About</li>
           <li className="header-li">Services</li>
           <li className="header-li">
-            <Link style={{ color: '#fff' }} to="/Room">
+            <Link style={{ color: '#fff' }} to="/ViewRooms">
               Room
             </Link>
           </li>
@@ -31,6 +42,13 @@ function Header() {
               </Link>
             </Button>
           </li>
+          {auth && (
+            <li className="header-li">
+              <Button className="header-bt" onClick={logOut}>
+                Logout
+              </Button>
+            </li>
+          )}
         </ul>
       </header>
     </div>
