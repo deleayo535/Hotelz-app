@@ -6,6 +6,8 @@ import apiService from '../../utils/apiServices';
 
 function SignUp() {
   const navigate = useNavigate();
+  const [loading, setloading] = useState(false);
+
   const [form, setForm] = useState({
     fullName: '',
     email: '',
@@ -18,6 +20,8 @@ function SignUp() {
     setForm({ ...form, [name]: value });
   };
   const signUpHandler = async () => {
+    setloading(true);
+
     const { email, password, confirmPassword, fullName } = form;
     try {
       if (password !== confirmPassword) return;
@@ -33,6 +37,7 @@ function SignUp() {
       navigate('/');
     } catch (error) {
       console.log(error);
+      setloading(false);
     }
   };
   return (
@@ -79,8 +84,9 @@ function SignUp() {
           size="medium"
           block
           onClick={signUpHandler}
+          disabled={loading}
         >
-          Sign Up
+          {loading ? 'LOADING...' : form.email ? `Sign Up` : 'Sign Up'}
         </Button>
       </div>
     </div>

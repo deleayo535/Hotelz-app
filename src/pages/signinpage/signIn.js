@@ -6,6 +6,8 @@ import apiService from '../../utils/apiServices';
 
 function SignIn() {
   const navigate = useNavigate();
+  const [loading, setloading] = useState(false);
+
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -17,6 +19,8 @@ function SignIn() {
   };
 
   const logInHandler = async () => {
+    setloading(true);
+
     const { email, password } = form;
     try {
       const auth = await apiService('/api/v1/auth/login', 'POST', {
@@ -28,6 +32,7 @@ function SignIn() {
       navigate('/');
     } catch (error) {
       console.log(error);
+      setloading(false);
     }
   };
 
@@ -62,8 +67,9 @@ function SignIn() {
           size="medium"
           block
           onClick={logInHandler}
+          disabled={loading}
         >
-          Sign In
+          {loading ? 'LOADING...' : form.password ? `Sign In` : 'Sign In'}
         </Button>
         <p className="sign-p">
           If you don't have an Account.
