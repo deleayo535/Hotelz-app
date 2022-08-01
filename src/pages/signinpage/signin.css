@@ -42,3 +42,24 @@
   font-family: 'Lora', serif;
   color: #00917c;
 }
+
+/* @media screen and (max-width: 600px) {
+  .sign-container {
+    width: 80%;
+    height: 300px;
+  }
+
+  .sign-page {
+    height: 60vh;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  .sign-container {
+    width: 80%;
+    height: 360px;
+  }
+  .sign-page {
+    height: 90vh;
+  }
+}

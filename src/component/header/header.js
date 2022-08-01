@@ -33,10 +33,10 @@ function Header() {
               Home
             </Link>
           </li>
-          <li className="header-li">About</li>
+          {/* <li className="header-li">About</li> */}
           <li className="header-li">
             <Link style={{ color: '#fff' }} to="/ViewRooms">
-              Room
+              Rooms
             </Link>
           </li>
           <li className="header-li">

@@ -82,15 +82,10 @@
   }
 
   .header-li {
-    font-size: 12px;
-    /* padding-top: 1rem; */
-    /* padding-bottom: 1rem; */
+    font-size: 18px;
     padding-left: 8px;
     padding-right: 0;
-    font-weight: 400;
-    color: #fff;
-    position: relative;
-    opacity: 1 !important;
+    font-weight: 600;
   }
 
   .header-bt {

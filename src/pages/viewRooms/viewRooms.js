@@ -42,7 +42,7 @@ function ViewRooms() {
       >
         <Header />
         <div>
-          <h1>Our Rooms</h1>
+          <h1 style={{ color: '#fff' }}>Available Rooms</h1>
         </div>
       </div>
       <div className="cardcontainer">{Cards}</div>

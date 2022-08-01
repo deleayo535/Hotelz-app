@@ -30,7 +30,7 @@ function Detail() {
           style={{ width: '15rem' }}
         />
       </div>
-      <div style={{ marginLeft: '40px', marginTop: '20px' }}>
+      <div style={{ marginLeft: '30px', marginTop: '20px' }}>
         <Forms />
       </div>
     </div>

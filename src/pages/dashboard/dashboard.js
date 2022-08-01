@@ -1,6 +1,7 @@
 import Header from '../../component/header/header';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../utils/apiServices';
+import Footer from '../../component/footer/footer';
 import CardFill from '../../component/Card/Card';
 import { useLocation } from 'react-router-dom';
 
@@ -74,6 +75,7 @@ function Dashboard() {
       >
         <Header />
         <div className="cardcontainer">{Cards}</div>
+        <Footer />
       </div>
     </div>
   );

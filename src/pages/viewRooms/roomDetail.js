@@ -35,9 +35,7 @@ function RoomDetails() {
                 <img
                   src={room?.imageCover}
                   alt="rooms"
-                  style={{
-                    borderRadius: '15px',
-                  }}
+                  style={{ width: '100%', borderRadius: '15px' }}
                 ></img>
               </div>
               <div className="room-title">

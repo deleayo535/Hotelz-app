@@ -46,6 +46,24 @@ code {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  padding: 0px 20px;
   margin: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .cardcontainer {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardcontainer {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ant-btn {
+    line-height: 0.5715 !important;
+    padding: 4px 8px !important;
+  }
 }
