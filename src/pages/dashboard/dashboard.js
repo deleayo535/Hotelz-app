@@ -3,14 +3,9 @@ import React, { useState, useEffect } from 'react';
 import apiService from '../../utils/apiServices';
 import Footer from '../../component/footer/footer';
 import CardFill from '../../component/Card/Card';
-import { useLocation } from 'react-router-dom';
 
 function Dashboard() {
-  const { search } = useLocation();
   const auth = sessionStorage.getItem('user');
-
-  const query = new URLSearchParams(search);
-  const reference = query.get('reference');
 
   const [bookings, setbooking] = useState([]);
 
@@ -35,23 +30,6 @@ function Dashboard() {
       getbooking(user);
     }
   }, [auth]);
-  const handleVerify = async (e) => {
-    try {
-      await apiService(`/api/v1/transaction/verify`, 'POST', {
-        reference: reference,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    if (reference) {
-      handleVerify();
-      // const user = JSON.parse(auth);
-      // getbooking(user);
-    }
-    // eslint-disable-next-line
-  }, [reference]);
 
   const Cards = bookings.map((item, i) => {
     return (

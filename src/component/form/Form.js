@@ -71,7 +71,7 @@ const Forms = () => {
         {
           email: form.email,
           amount: amountToPay(),
-          callback_url: window.location.origin + '/dashboard',
+          callback_url: window.location.origin,
           room: form.room,
           price: form.price,
           user: form.user,
