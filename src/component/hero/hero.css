@@ -1,7 +1,6 @@
 .hero-container {
   background-image: url(https://preview.colorlib.com/theme/hotell/images/ximg_1.jpg.pagespeed.ic.HbEqGs_pAR.webp);
   height: 100vh;
-  min-height: 700px;
 
   background-size: cover;
   background-position: center;
@@ -29,4 +28,29 @@
   border-radius: 30px;
   border-color: transparent;
   font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-container {
+    height: 80vh;
+  }
+
+  .hero-text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-container {
+    height: 60vh;
+  }
+
+  .hero-text {
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

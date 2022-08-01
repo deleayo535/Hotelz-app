@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: row;
   margin: 30px;
+  gap: 30px;
 }
 
 .room-container {
-  width: 20rem;
+  width: 30%;
   text-align: center;
   margin-left: 2rem;
   padding: 2rem 1rem;
@@ -53,4 +54,36 @@
   color: #6b6b6b;
   line-height: 26px;
   margin: 0 0 15px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-room {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    gap: 0;
+  }
+
+  .room-container {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section-room {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 0;
+  }
+
+  .room-container {
+    width: 100%;
+    text-align: center;
+    margin-left: 2rem;
+    padding: 2rem 0;
+  }
 }

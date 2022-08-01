@@ -34,7 +34,6 @@ function Header() {
             </Link>
           </li>
           <li className="header-li">About</li>
-          <li className="header-li">Services</li>
           <li className="header-li">
             <Link style={{ color: '#fff' }} to="/ViewRooms">
               Room
@@ -42,14 +41,18 @@ function Header() {
           </li>
           <li className="header-li">
             <Button className="header-bt">
-              <Link to={auth ? '/dashboard' : '/SignIn'}>
+              <Link
+                size="small"
+                // style={{ alignItems: 'center' }}
+                to={auth ? '/dashboard' : '/SignIn'}
+              >
                 {auth ? 'Dashboard' : 'Sign In'}
               </Link>
             </Button>
           </li>
           {auth && (
             <li className="header-li">
-              <Button className="header-bt" onClick={logOut}>
+              <Button size="small" className="header-bt" onClick={logOut}>
                 Logout
               </Button>
             </li>

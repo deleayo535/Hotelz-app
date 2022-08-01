@@ -32,7 +32,7 @@ function CardFill(props) {
             </p>
             <p className="card-p">
               Capacity:{' '}
-              <span className="card-s">Max persion {props.capacity}</span>
+              <span className="card-s">Max person {props.capacity}</span>
             </p>
             <p className="card-p">
               Bed: <span className="card-s">{props.bed}</span>

@@ -9,6 +9,18 @@
 @media screen and (max-width: 600px) {
   .cardfill {
     width: 100%;
+    height: 100%;
+  }
+
+  .cardcontainer {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cardfill {
+    width: 50%;
   }
 }
 
