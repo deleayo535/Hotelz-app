@@ -53,8 +53,18 @@ function Dashboard() {
         className="hero-container"
       >
         <Header />
+
+        <div
+          style={{
+            color: '#fff',
+            fontSize: '28px',
+            fontFamily: 'Cabin, sans-serif',
+          }}
+        >
+          Transaction history
+        </div>
         <div className="cardcontainer">{Cards}</div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

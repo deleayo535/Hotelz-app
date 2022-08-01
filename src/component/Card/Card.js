@@ -22,7 +22,7 @@ function CardFill(props) {
           <div>
             <h4 className="card-h4">{props.title}</h4>
             <h3 className="card-h3">
-              {props.price}
+              ₦{props.price}
               <span className="card-span"> /Pernight</span>
             </h3>
           </div>
