@@ -28,21 +28,21 @@ function Header() {
           </Link>
         </h1>
         <ul className="navbar-nav header-ul">
-          <li className="header-li">
+          {/* <li className="header-li">
             <Link style={{ color: '#fff' }} to="/">
               Home
             </Link>
-          </li>
+          </li> */}
           {/* <li className="header-li">About</li> */}
-          <li className="header-li">
+          {/* <li className="header-li">
             <Link style={{ color: '#fff' }} to="/ViewRooms">
               Rooms
             </Link>
-          </li>
+          </li> */}
           <li className="header-li">
             <Button className="header-bt">
               <Link
-                size="small"
+                size="large"
                 // style={{ alignItems: 'center' }}
                 to={auth ? '/dashboard' : '/SignIn'}
               >
@@ -52,7 +52,7 @@ function Header() {
           </li>
           {auth && (
             <li className="header-li">
-              <Button size="small" className="header-bt" onClick={logOut}>
+              <Button size="large" className="header-bt" onClick={logOut}>
                 Logout
               </Button>
             </li>

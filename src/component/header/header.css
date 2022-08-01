@@ -37,12 +37,14 @@
 }
 
 .header-bt {
+  line-height: 100%;
+  /* display: flex; */
   color: #fff;
   height: 30px;
   background-color: #00917c;
   border-radius: 30px;
   border-color: transparent;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .navbar-nav {
@@ -97,7 +99,7 @@
     background-color: #00917c;
     border-radius: 14px;
     border-color: transparent;
-    font-size: 8px;
+    font-size: 14px;
   }
 
   .navbar-nav {
