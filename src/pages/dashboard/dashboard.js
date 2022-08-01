@@ -50,6 +50,7 @@ function Dashboard() {
       // const user = JSON.parse(auth);
       // getbooking(user);
     }
+    // eslint-disable-next-line
   }, [reference]);
 
   const Cards = bookings.map((item, i) => {

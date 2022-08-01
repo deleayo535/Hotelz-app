@@ -50,6 +50,7 @@ const Forms = () => {
 
       setForm({ ...form, user: user._id, email: user.email });
     }
+    // eslint-disable-next-line
   }, [auth]);
 
   const amountToPay = () => {

@@ -23,6 +23,7 @@ function RoomDetails() {
   };
   useEffect(() => {
     getrooms();
+    // eslint-disable-next-line
   }, []);
   return (
     <div>
