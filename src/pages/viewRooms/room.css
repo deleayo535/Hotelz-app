@@ -11,6 +11,8 @@
 
 .room-Form {
   width: 40%;
+  padding: 0 20px;
+  /* padding-right: 20px !important; */
 }
 
 .room-details {
@@ -95,6 +97,7 @@
 
   .room-Form {
     width: 100%;
+    padding-right: 0;
     padding: 0;
   }
 }
