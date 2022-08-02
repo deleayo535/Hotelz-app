@@ -1,8 +1,8 @@
 import Header from '../../component/header/header';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../utils/apiServices';
-import Footer from '../../component/footer/footer';
 import CardFill from '../../component/Card/Card';
+import './dashboard.css';
 
 function Dashboard() {
   const auth = sessionStorage.getItem('user');
@@ -54,16 +54,12 @@ function Dashboard() {
       >
         <Header />
 
-        <div
-          style={{
-            color: '#fff',
-            fontSize: '28px',
-            fontFamily: 'Cabin, sans-serif',
-          }}
-        >
-          Transaction history
-        </div>
-        <div className="cardcontainer">{Cards}</div>
+        <div className="dash-h1">Booking history</div>
+        {Cards.length === 0 ? (
+          <div className="dash-title">No booking history</div>
+        ) : (
+          <div className="cardcontainer">{Cards}</div>
+        )}
         {/* <Footer /> */}
       </div>
     </div>
