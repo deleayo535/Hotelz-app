@@ -1,14 +1,18 @@
 import { Button, Form, Input, Select } from 'antd';
 import React from 'react';
 import './Form.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import apiService from '../../utils/apiServices';
 import { useEffect, useState } from 'react';
 
 const Forms = () => {
-  const auth = sessionStorage.getItem('user');
+  const { search } = useLocation();
 
+  const query = new URLSearchParams(search);
+  const id = query.get('id') || null;
+
+  const auth = sessionStorage.getItem('user');
   const [options, setoptions] = useState([]);
   const [loading, setloading] = useState(false);
   const [form, setForm] = useState({
@@ -42,7 +46,7 @@ const Forms = () => {
 
   useEffect(() => {
     getrooms();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (auth) {
@@ -52,6 +56,13 @@ const Forms = () => {
     }
     // eslint-disable-next-line
   }, [auth]);
+
+  useEffect(() => {
+    if (id && options.length > 0) {
+      setForm({ ...form, room: id });
+    }
+    // eslint-disable-next-line
+  }, [id, options]);
 
   const amountToPay = () => {
     const room = options.filter((item) => item._id === form.room);
@@ -110,15 +121,17 @@ const Forms = () => {
               <Select.Option value="5">5 Guests</Select.Option>
             </Select>
           </Form.Item>
-          <Form.Item className="form-size" name="Room">
-            <Select placeholder="Room" onChange={onSelectChange}>
-              {options.map(({ _id, title }) => (
-                <Select.Option value={_id} key={_id}>
-                  {title}
-                </Select.Option>
-              ))}
-            </Select>
-          </Form.Item>
+          {!id && (
+            <Form.Item className="form-size" name="Room">
+              <Select placeholder="Room" onChange={onSelectChange}>
+                {options.map(({ _id, title }) => (
+                  <Select.Option value={_id} key={_id}>
+                    {title}
+                  </Select.Option>
+                ))}
+              </Select>
+            </Form.Item>
+          )}
           <div>
             <Form.Item name="phone number">
               <Input placeholder="Phone Number" />
